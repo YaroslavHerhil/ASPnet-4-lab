@@ -1,0 +1,17 @@
+﻿@page "{title}/{genre}/{setting}/{author}/{year:int}/{publisher}"
+@model BookInfoModel
+@using Aspnet_4_lab.Model.Models
+@{
+   
+}
+
+<div>
+    <h2>@RouteData.Values["title"]</h2>
+    <p>Author: @RouteData.Values["author"]</p>
+    <p>Genre: @RouteData.Values["genre"]</p>
+    <p>Setting: @RouteData.Values["setting"]</p>
+    <p>Publisher: @RouteData.Values["publisher"]</p>
+    <p>Release Year: @RouteData.Values["year"]</p>
+</div>
+
+<a asp-page="/Bookshelf" class="text-right">Go back</a>

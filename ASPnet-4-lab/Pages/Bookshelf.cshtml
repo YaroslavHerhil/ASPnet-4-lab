@@ -1,0 +1,15 @@
+﻿@page
+@using Aspnet_4_lab.Model.Models
+@model ASPnet_4_lab.Pages.BookshelfModel
+@{
+}
+
+<div>
+    @foreach(Book book in Model.BookFileService.GetBooks())
+    {
+        <a asp-page="/BookInfo" asp-route-title="@book.Title" asp-route-author="@book.AuthorName" asp-route-genre="@book.Genre" asp-route-setting="@book.Setting" asp-route-year="@book.ReleaseYear" asp-route-publisher="@book.Publisher">
+            @book.Title
+        </a>
+        <br/>
+    }
+</div>
